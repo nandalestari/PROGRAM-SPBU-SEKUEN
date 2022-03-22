@@ -49,6 +49,29 @@ x:
 		cout << "=====================================================\n";
 		}
 		goto x;
-	} 
+	} if(pilihan == 2){
+		ofstream file ("struk.txt");
+		if(!file.is_open()){
+			cout << "File is not available\n";
+		}
+		else{
+		file << "       STRUK SPBU GIWANGAN \n";
+		file << "======================================\n";
+		file << "PERTALITE[1]\t PERTAMAX[2]\n";
+		file << " Jenis Bensin : " << bensin << endl;
+		file << " Jumlah Liter : " << jumlah << endl;
+		file << "--------------------------------------\n";
+		file << " Total Harga      : " << total << endl;
+		file << " Bayar            : " << uang << endl;
+		file << " Kembalian        : " << kembalian << endl;
+		file << "======================================\n";
+		file << "   TERIMA KASIH ATAS KUNJUNGAN ANDA\n";
+		file << "    SEMOGA HARI ANDA MENYENANGKAN:)\n";
+		file << "======================================\n";
+		file.close();
+		}
+	}
+	return 0;
+}
 		
 }
